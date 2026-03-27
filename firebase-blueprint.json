@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "Track": {
+      "title": "Track",
+      "description": "A generated music track metadata",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "genre": { "type": "string" },
+        "mood": { "type": "string" },
+        "topic": { "type": "string" },
+        "lyrics": { "type": "string" },
+        "instrumentation": { "type": "string" },
+        "singer": { "type": "string" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "genre", "topic", "lyrics", "userId", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/tracks/{trackId}": {
+      "schema": { "$ref": "#/entities/Track" },
+      "description": "Stores generated music tracks"
+    }
+  }
+}

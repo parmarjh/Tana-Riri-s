@@ -1,0 +1,5 @@
+{
+  "name": "Tanariri",
+  "description": "AI Music Generator and Audio Dashboard.",
+  "requestFramePermissions": ["microphone"]
+}
